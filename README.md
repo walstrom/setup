@@ -1,2 +1,2 @@
 # setup
-Contains files to setup an instance of walstrom
+Contains files to setup a personal developer environment

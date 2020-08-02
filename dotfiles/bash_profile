@@ -1,6 +1,9 @@
 alias emacs="/usr/local/bin/emacs"
 alias dc="docker-compose"
 
+# Don't get stick in VIM again
+export EDITOR=emacs
+
 # Make command line pretty
 source ~/.colors
 export CLICOLOR=1
