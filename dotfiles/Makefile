@@ -1,4 +1,4 @@
-DOTFILES=bash_profile tmux.conf colors
+DOTFILES=bash_profile tmux.conf colors emacs.d
 
 install:
 	for dotfile in $(DOTFILES); do \

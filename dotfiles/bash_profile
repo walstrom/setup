@@ -6,11 +6,24 @@ source ~/.colors
 export CLICOLOR=1
 export LSCOLORS=Exfxcxdxbxegedabagacad
 
+if ! [ -d ~/Repos ]; then
+    mkdir -p ~/Repos
+fi
+
 # Decorate prompt with Git information
+
+if ! [ -d ~/Repos/git ]; then
+    git clone http://github.com/git/git.git ~/Repos/git
+fi
+
 source ~/Repos/git/contrib/completion/git-prompt.sh
 source ~/Repos/git/contrib/completion/git-completion.bash
 
 PS1="\[$White\]\t\[$Red\]-\[$Green\]\u\[$Yellow\]\[$Yellow\]\w\[\033[m\]\[$BYellow\]\$(__git_ps1)\[$White\]\n\$ "
+
+# Support brew command completion
+
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 # Lots of history
 history=50000
