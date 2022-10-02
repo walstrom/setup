@@ -4,7 +4,7 @@ function command_exists {
     type $1 2&> /dev/null
 }
     
-COMMANDS='docker jq'
+COMMANDS='emacs node jq'
 
 echo "Installing brew depencencies"
 

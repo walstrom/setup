@@ -1,0 +1,26 @@
+setopt AUTO_CD
+setopt CORRECT
+setopt CORRECT_ALL
+
+HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
+setopt EXTENDED_HISTORY
+setopt SHARE_HISTORY
+setopt APPEND_HISTORY
+setopt HIST_REDUCE_BLANKS
+setopt INC_APPEND_HISTORY
+SAVEHIST=5000
+HISTSIZE=2000
+
+autoload -Uz compinit && compinit
+
+source ~/Repos/git/contrib/completion/git-prompt.sh
+zstyle ':completion:*:*:git:*' script ~/Repos/git/contrib/completion/.git-completion.bash
+
+setopt PROMPT_SUBST
+
+PROMPT='%(?.%F{green}√.%F{red}?%?)%f %B%F{240}%1~%f%b %F{yellow}$(__git_ps1) %F{white}\$ '
+
+## Set PATH, MANPATH, etc., for Homebrew.
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+

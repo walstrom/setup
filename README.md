@@ -1,2 +1,2 @@
 # setup
-Contains files to setup a personal developer environment
+Stuff to set up my personal developer environment
