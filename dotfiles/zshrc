@@ -20,6 +20,8 @@ setopt PROMPT_SUBST
 
 PROMPT='%(?.%F{green}√.%F{red}?%?)%f %B%F{240}%1~%f%b %F{yellow}$(__git_ps1) %F{white}\$ '
 
+export EDITOR=emacs
+
 ## Set PATH, MANPATH, etc., for Homebrew.
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
